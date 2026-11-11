@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>School Competition Registration</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            width: 400px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #087e8b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #05616b;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>School Competition Registration</h2>
+
+    <form action="/register" method="POST">
+
+        <label>Student Name</label>
+        <input type="text"
+               name="student_name"
+               placeholder="Enter student name"
+               required>
+
+        <label>Father Name</label>
+        <input type="text"
+               name="father_name"
+               placeholder="Enter father name"
+               required>
+
+        <label>Mobile Number</label>
+        <input type="tel"
+               name="mobile"
+               placeholder="Enter mobile number"
+               pattern="[0-9]{10}"
+               required>
+
+        <label>Class</label>
+        <select name="class_name" required>
+            <option value="">Select Class</option>
+            <option value="11th">11th</option>
+            <option value="12th">12th</option>
+        </select>
+
+        <label>School Name</label>
+        <input type="text"
+               name="school_name"
+               placeholder="Enter school name"
+               required>
+
+        <label>Competition Name</label>
+        <input type="text"
+               name="competition"
+               placeholder="Enter competition name"
+               required>
+
+        <button type="submit">Register</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
